@@ -1,4 +1,5 @@
-import urllib.request, urllib.parse, urllib.error, bs4
+import urllib.request, urllib.parse, urllib.error
+from bs4 import BeautifulSoup
 import ssl
 
 # Ignore SSL certificate errors
@@ -8,7 +9,7 @@ ctx.verify_mode = ssl.CERT_NONE
 
 url = input('Enter - ')
 html = urllib.request.urlopen(url, context=ctx).read()
-soup = bs4(html, 'html.parser')
+soup = BeautifulSoup(html, 'html.parser')
 
 # Retrieve all of the anchor tags
 tags = soup('a')
