@@ -1,4 +1,4 @@
-import urllib.request, urllib.parse, urllib.error, beautifulsoup4
+import urllib.request, urllib.parse, urllib.error, bs4
 import ssl
 
 # Ignore SSL certificate errors
